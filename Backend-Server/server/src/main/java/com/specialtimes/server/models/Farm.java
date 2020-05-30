@@ -21,4 +21,12 @@ public class Farm {
     public void setPotatoList(List<Potato> potatoList) {
         this.potatoList = potatoList;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
