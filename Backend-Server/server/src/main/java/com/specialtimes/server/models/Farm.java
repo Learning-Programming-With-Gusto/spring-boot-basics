@@ -6,6 +6,10 @@ import java.util.List;
 @Entity
 public class Farm {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @JoinTable(name = "Farm_To_Potato")
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Potato> potatoList;
