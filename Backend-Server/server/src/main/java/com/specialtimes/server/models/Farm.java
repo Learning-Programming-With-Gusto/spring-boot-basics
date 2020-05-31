@@ -11,7 +11,7 @@ public class Farm {
     private Long id;
 
     @JoinTable(name = "Farm_To_Potato")
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Potato> potatoList;
 
     public List<Potato> getPotatoList() {
