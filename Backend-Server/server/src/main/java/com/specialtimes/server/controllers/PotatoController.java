@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController(value = "/potatoes")
+@RestController()
+@RequestMapping("potatoes")
 public class PotatoController {
 
     private final PotatoService potatoService;

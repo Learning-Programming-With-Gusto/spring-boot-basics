@@ -6,10 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RequestMapping("/farms")
+@RestController()
+@RequestMapping("farms")
 public class FarmController {
 
     private final FarmService farmService;
@@ -20,7 +22,7 @@ public class FarmController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Farm>> getFarms() {
+    public ResponseEntity<List<Farm>> getAllFarms() {
         return this.farmService.getFarms();
     }
 }
