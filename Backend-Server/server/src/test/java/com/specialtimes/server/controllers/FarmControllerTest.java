@@ -1,7 +1,6 @@
 package com.specialtimes.server.controllers;
 
 import com.specialtimes.server.models.Farm;
-import com.specialtimes.server.repositories.FarmRepository;
 import com.specialtimes.server.services.FarmService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,5 +36,9 @@ public class FarmControllerTest {
 
         assertEquals(HttpStatus.OK, farmListResponseEntity.getStatusCode());
         assertEquals(3, Objects.requireNonNull(farmListResponseEntity.getBody()).size());
+    }
+
+    private void addNewFarms() {
+
     }
 }
