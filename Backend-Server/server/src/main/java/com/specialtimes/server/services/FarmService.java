@@ -36,10 +36,11 @@ public class FarmService {
         Farm farm = new Farm();
 
         List<Potato> potatoList = new ArrayList<>();
-        Potato potato = new Potato();
-        potato.setSize(random.nextInt(50));
-        potatoList.add(potato);
-
+        for (int x = 0; x < random.nextInt(5); x++) {
+            Potato potato = new Potato();
+            potato.setSize(random.nextInt(50));
+            potatoList.add(potato);
+        }
         farm.setPotatoList(potatoList);
         farm = this.farmRepository.save(farm);
 
