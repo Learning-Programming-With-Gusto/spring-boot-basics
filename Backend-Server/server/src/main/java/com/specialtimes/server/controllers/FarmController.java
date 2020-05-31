@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController()
+@RestController
 @RequestMapping("farms")
 public class FarmController {
 
@@ -24,5 +24,10 @@ public class FarmController {
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Farm>> getAllFarms() {
         return this.farmService.getFarms();
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<Farm> addRandomFarm() {
+        return this.farmService.addNewFarm();
     }
 }
