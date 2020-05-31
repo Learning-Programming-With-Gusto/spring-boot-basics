@@ -38,7 +38,6 @@ public class FarmService {
         List<Potato> potatoList = new ArrayList<>();
         Potato potato = new Potato();
         potato.setSize(random.nextInt(50));
-        potato.setCost(random.nextInt(5));
         potatoList.add(potato);
 
         farm.setPotatoList(potatoList);

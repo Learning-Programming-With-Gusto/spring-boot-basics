@@ -14,8 +14,6 @@ public class Potato {
 
     private int size;
 
-    private int cost;
-
     public int getSize() {
         return size;
     }
@@ -30,13 +28,5 @@ public class Potato {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public int getCost() {
-        return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
     }
 }
